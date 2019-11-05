@@ -12,6 +12,8 @@
  echo '<li><a href="actpaciente.php">Actualizar Paciente</a></li>';
  echo '<li><a href="noat.php">Pacientes No Atendidos </a></li>';
  echo '<li><a href="at.php">Pacientes Atendidos </a></li>';
+ echo '<li><a href="noatxmed.php">No Atendidos Por Medico</a></li>';
+ echo '<li><a href="atxmed.php">Atendidos Por Medico</a></li>';
  echo "</ul>" ;
 ?>
 
