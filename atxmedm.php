@@ -32,7 +32,7 @@
 	<div id="bodybox">
 		<div id="subnavi">
 		<!-- menu -->
-		<?php include ("menu.php"); ?>
+		<?php include ("menu2.php"); ?>
 		</div>
 		<div class="ic"></div>	
 		<div id="content">
@@ -44,7 +44,8 @@
 
 include("conexion.php");
 @$codmed=$_POST["codmed"];
-echo "<form action=atxmed.php method=Post ENCTYPE=multipart/form-data>";
+
+echo "<form action=atxmedm.php method=Post ENCTYPE=multipart/form-data>";
 echo "<table border=1>";
 echo "<tr>";
 echo "<td>Codigo de Medico: </td>";
@@ -60,7 +61,6 @@ echo"</option>";
 echo"</select>";
 echo"</td>";
 echo "</table>";
-
 echo "<input type=submit name=guardar value=Buscar>";
 echo "</form>";
  

@@ -16,7 +16,14 @@ if(!isset($_SESSION)) {
   else {
   	$_SESSION["id_user"]=$registro["login"];
   	$_SESSION["id_nombre"]=$registro["nombre"];
+    
+    if($login=="admin" && $clave=="123456"){
     header("Location:paciente.php");
+    }
+   
+    if($login!="admin" && $clave!="123456"){
+      header("Location:pacientesxmedicom.php");
+      }
     
   }
   

@@ -32,7 +32,7 @@
 	<div id="bodybox">
 		<div id="subnavi">
 		<!-- menu -->
-		<?php include ("menu.php"); ?>
+		<?php include ("menu2.php"); ?>
 		</div>
 		<div class="ic"></div>	
 		<div id="content">
@@ -43,8 +43,8 @@
 <?php
 
 include("conexion.php");
-@$codmed=$_POST["codmed"];
-echo "<form action=atxmed.php method=Post ENCTYPE=multipart/form-data>";
+
+echo "<form action=noatxmedm.php method=Post ENCTYPE=multipart/form-data>";
 echo "<table border=1>";
 echo "<tr>";
 echo "<td>Codigo de Medico: </td>";
@@ -60,11 +60,10 @@ echo"</option>";
 echo"</select>";
 echo"</td>";
 echo "</table>";
-
 echo "<input type=submit name=guardar value=Buscar>";
 echo "</form>";
  
-
+@$codmed=$_POST["codmed"];
 
   echo"<table border=1>";
   echo"<tr>";
@@ -79,9 +78,8 @@ echo "</form>";
   echo"<td><h3>Atendido</h3></td>";
   echo"<td><h3>Diagnostico</h3></td>";
   echo"</tr>";
-      $sql="SELECT * FROM ingreso i JOIN paciente p ON i.codigoPaciente = p.cedula WHERE codigoMedico = '$codmed' AND atendido = 'SI'";
-      $resp=mysqli_query($conn,$sql);     
-      
+      $sql="SELECT * FROM ingreso i JOIN paciente p ON i.codigoPaciente = p.cedula WHERE codigoMedico = '$codmed' AND atendido = 'NO'";
+      $resp=mysqli_query($conn,$sql);
       while($mostrar=mysqli_fetch_array($resp)){
       
       echo"<tr>";
@@ -127,8 +125,7 @@ echo "</form>";
       
       }
       echo"</table>";
-    
-   
+  
   ?>
         
 
